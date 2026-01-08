@@ -76,8 +76,8 @@ export default function Footer() {
           </div>
           
           <div className="flex items-center gap-8 opacity-20 hover:opacity-100 transition-opacity">
-            <span className="text-[10px] font-mono uppercase tracking-[0.3em]">Lat: 6.5244° N</span>
-            <span className="text-[10px] font-mono uppercase tracking-[0.3em]">Lon: 3.3792° E</span>
+            <span className="text-[10px] font-mono uppercase tracking-[0.3em]">web developer</span>
+            <span className="text-[10px] font-mono uppercase tracking-[0.3em]">cybersecurity</span>
           </div>
 
           <motion.div 

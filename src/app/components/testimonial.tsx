@@ -5,16 +5,16 @@ import StarRating from "./StarRating";
 
 const staticTestimonials = [
   {
-    name: "Alex Sterling",
-    role: "CEO, NexaCorp",
-    content: "The neural-inspired architecture Ayomide built for our dashboard transformed how we visualize our metrics.",
-    tag: "Protocol_01"
+    name: "Engr Temitope",
+    role: "CEO, Topotas Optimum Service",
+    content: "This works are sleeks great looking efficient no stress no complain.",
+    tag: "Topotas Optimum Services"
   },
   {
-    name: "Sarah Chen",
-    role: "UX Director",
-    content: "Minimalism at its peak. The Ether UI is not just a design; it's a high-performance experience.",
-    tag: "Protocol_02"
+    name: "Sarah Aderemi",
+    role: "CEO, yolux",
+    content: "Minimalism at its peak. HIS work is not just wondeful; it's a high-performance experience.",
+    tag: "Yolux"
   }
 ];
 
