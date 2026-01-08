@@ -2,46 +2,63 @@
 import { motion } from 'framer-motion'
 
 const technicalSkills = [
-  { name: "HTML & CSS", level: 90 },
-  { name: "JavaScript", level: 85 },
-  { name: "Next.js", level: 80 },
-  { name: "Tailwind CSS", level: 88 },
+  { name: "Next.js 15", level: 80, sector: "Architecture" },
+  { name: "TypeScript", level: 85, sector: "Logic" },
+  { name: "Tailwind CSS", level: 90, sector: "Aesthetics" },
+  { name: "JavaScript", level: 88, sector: "Core" },
 ]
 
 const professionalSkills = [
-  { name: "Communication", level: 95 },
-  { name: "Creativity", level: 85 },
-  { name: "Teamwork", level: 90 },
-  { name: "Project Management", level: 80 },
+  { name: "Global Comm", level: 95 },
+  { name: "UX Strategy", level: 85 },
+  { name: "Lead Dev", level: 90 },
+  { name: "Agile Logic", level: 80 },
 ]
 
 export default function Skills() {
   return (
-    <section id="skills" className="p-8">
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="bg-slate-900 p-6 rounded-xl"
-      >
-        <h2 className="text-3xl font-heading text-solarYellow mb-6">Skills</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Technical Skills */}
-          <div>
-            <h3 className="text-lg text-accentBlue font-semibold mb-4">Technical Skills</h3>
-            <div className="space-y-4">
-              {technicalSkills.map((skill) => (
-                <div key={skill.name}>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>{skill.name}</span>
-                    <span>{skill.level}%</span>
+    <section id="skills" className="relative bg-[#0A0A0A] py-32 px-6 overflow-hidden">
+      {/* Background Neural Light Source */}
+      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-indigo-500/5 blur-[100px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="mb-24 space-y-4">
+          <span className="text-[10px] uppercase tracking-[0.8em] text-indigo-400 font-bold block">Internal Capabilities</span>
+          <h2 className="text-5xl md:text-7xl font-light tracking-tighter text-white">
+            System <span className="font-serif italic opacity-80">Proficiency.</span>
+          </h2>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-20">
+          {/* Technical Section */}
+          <div className="space-y-12">
+            <h3 className="text-[10px] uppercase tracking-[0.4em] text-white/30 border-b border-white/5 pb-4">
+              // Technical_Nodes
+            </h3>
+            <div className="grid gap-10">
+              {technicalSkills.map((skill, idx) => (
+                <div key={skill.name} className="group relative">
+                  <div className="flex justify-between items-end mb-3">
+                    <div className="space-y-1">
+                      <span className="text-[10px] text-indigo-400/60 font-mono uppercase tracking-widest block">
+                        {skill.sector}
+                      </span>
+                      <span className="text-xl font-light tracking-tight text-white group-hover:text-indigo-400 transition-colors">
+                        {skill.name}
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-mono text-white/20 uppercase tracking-tighter">
+                      Power_lvl: {skill.level}%
+                    </span>
                   </div>
-                  <div className="w-full bg-gray-700 h-3 rounded relative">
+                  
+                  {/* Minimalist Neural Track */}
+                  <div className="relative w-full h-[2px] bg-white/5 rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
-                      transition={{ duration: 0.8 }}
-                      className="absolute top-0 left-0 h-3 bg-teal-400 rounded"
+                      transition={{ duration: 1.5, ease: "circOut" }}
+                      className="absolute top-0 left-0 h-full bg-gradient-to-r from-transparent via-indigo-500 to-white shadow-[0_0_15px_rgba(99,102,241,0.5)]"
                     />
                   </div>
                 </div>
@@ -49,30 +66,40 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Professional Skills */}
-          <div>
-            <h3 className="text-lg text-accentBlue font-semibold mb-4">Professional Skills</h3>
-            <div className="space-y-4">
+          {/* Professional Section */}
+          <div className="space-y-12">
+            <h3 className="text-[10px] uppercase tracking-[0.4em] text-white/30 border-b border-white/5 pb-4">
+              // Soft_Processing
+            </h3>
+            <div className="grid grid-cols-2 gap-6">
               {professionalSkills.map((skill) => (
-                <div key={skill.name}>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span>{skill.name}</span>
-                    <span>{skill.level}%</span>
+                <motion.div 
+                  key={skill.name}
+                  whileHover={{ scale: 1.02 }}
+                  className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl hover:border-indigo-500/30 transition-all duration-500"
+                >
+                  <div className="flex flex-col gap-4">
+                    <div className="relative w-8 h-8 flex items-center justify-center">
+                       <svg className="absolute inset-0 w-full h-full -rotate-90">
+                          <circle cx="16" cy="16" r="14" stroke="currentColor" strokeWidth="1" fill="transparent" className="text-white/5" />
+                          <motion.circle 
+                            cx="16" cy="16" r="14" stroke="currentColor" strokeWidth="1" fill="transparent" 
+                            strokeDasharray="88"
+                            initial={{ strokeDashoffset: 88 }}
+                            whileInView={{ strokeDashoffset: 88 - (88 * skill.level) / 100 }}
+                            className="text-indigo-500"
+                          />
+                       </svg>
+                       <span className="text-[8px] font-mono text-white/40">{skill.level}%</span>
+                    </div>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-white/80">{skill.name}</span>
                   </div>
-                  <div className="w-full bg-gray-700 h-3 rounded relative">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      transition={{ duration: 0.8 }}
-                      className="absolute top-0 left-0 h-3 bg-blue-400 rounded"
-                    />
-                  </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }

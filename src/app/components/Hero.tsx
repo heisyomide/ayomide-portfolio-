@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { 
   FaGithub, 
   FaLinkedin, 
@@ -12,46 +15,86 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="flex flex-col items-center text-center py-20"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center bg-[#0A0A0A] overflow-hidden px-6"
     >
-      {/* Profile Image */}
-      <div className="w-40 h-40 rounded-full border-4 border-teal-400 overflow-hidden shadow-lg mb-6">
-        <img
-          src="/images/pro.jpg"
-          alt="Ayomide Kofoworola"
-          className="w-full h-full object-cover"
-        />
-      </div>
+      {/* Background Luminous Elements */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none" />
+      
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="relative z-10"
+      >
+        {/* Profile Image with "Ether" Glow */}
+        <div className="relative mb-10">
+          <div className="absolute inset-0 bg-indigo-500/20 blur-2xl rounded-full scale-110 animate-pulse" />
+          <div className="w-44 h-44 rounded-full border border-white/10 overflow-hidden relative z-10 p-1 bg-gradient-to-b from-white/20 to-transparent">
+            <img
+              src="/images/pro.jpg"
+              alt="Ayomide Kofoworola"
+              className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700"
+            />
+          </div>
+        </div>
 
-      {/* Name & Title */}
-      <h1 className="text-3xl font-bold text-white">Ayomide Kofoworola</h1>
-      <p className="text-teal-400 mt-2">Full Stack Web Developer</p>
+        {/* Text Stack */}
+        <div className="space-y-4">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-[10px] uppercase tracking-[0.8em] text-indigo-400 font-bold block"
+          >
+            Digital Architect
+          </motion.span>
+          
+          <h1 className="text-5xl md:text-8xl font-light tracking-tighter text-white leading-none">
+            Ayomide <span className="font-serif italic opacity-80">Kofoworola.</span>
+          </h1>
+          
+          <p className="text-white/40 text-lg md:text-xl font-light max-w-lg mx-auto leading-relaxed">
+            Crafting high-fidelity web environments through <br className="hidden md:block"/> 
+            minimalist design and neural logic.
+          </p>
+        </div>
 
-      {/* Social Icons */}
-      <div className="flex space-x-6 mt-6 text-gray-400">
-        <a href="https://github.com/heisyomide" className="hover:text-teal-400 transition">
-          <FaGithub size={22} />
-        </a>
-        <a href="#" className="hover:text-teal-400 transition">
-          <FaLinkedin size={22} />
-        </a>
-        <a href="https://x.com/he_is_yo?s=21" className="hover:text-teal-400 transition">
-          <FaTwitter size={22} />
-        </a>
-        <a href="https://www.facebook.com/share/1GnCQxft29/?mibextid=wwXIfr" className="hover:text-teal-400 transition">
-          <FaFacebook size={22} />
-        </a>
-        <a href="https://www.instagram.com/heis_yo?igsh=MWI4cXJ5Zmw0NHcxOQ%3D%3D&utm_source=qr" className="hover:text-teal-400 transition">
-          <FaInstagram size={22} />
-        </a>
-        <a href="https://pin.it/svBTEcxxp" className="hover:text-teal-400 transition">
-          <FaPinterest size={22} />
-        </a>
-        <a href="https://www.tiktok.com/@_yomide_01?_r=1&_d=ehm785id4ja75a&sec_uid=MS4wLjABAAAA6sdiwkrBtoTIoFNpooUmuEeOVaP32AXeYGapzuAE-iVeAeUlARBQNkXtXOHqJJrU&share_author_id=7021419986040210438&sharer_language=en&source=h5_m&u_code=dl93mca8i05hca&ug_btm=b8727,b0&social_share_type=4&utm_source=copy&sec_user_id=MS4wLjABAAAA6sdiwkrBtoTIoFNpooUmuEeOVaP32AXeYGapzuAE-iVeAeUlARBQNkXtXOHqJJrU&tt_from=copy&utm_medium=ios&utm_campaign=client_share&enable_checksum=1&user_id=7021419986040210438&share_link_id=477F7D64-D558-44DE-AE0D-9A530519F86A&share_app_id=1233" className="hover:text-teal-400 transition">
-          <FaTiktok size={22} />
-        </a>
+        {/* Floating Social Hub */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="flex flex-wrap justify-center gap-8 mt-12 px-6 py-4 bg-white/[0.03] backdrop-blur-xl border border-white/5 rounded-full"
+        >
+          {[
+            { icon: <FaGithub />, link: "https://github.com/heisyomide" },
+            { icon: <FaLinkedin />, link: "#" },
+            { icon: <FaTwitter />, link: "https://x.com/he_is_yo?s=21" },
+            { icon: <FaFacebook />, link: "https://www.facebook.com/share/1GnCQxft29/?mibextid=wwXIfr" },
+            { icon: <FaInstagram />, link: "https://www.instagram.com/heis_yo?igsh=MWI4cXJ5Zmw0NHcxOQ%3D%3D" },
+            { icon: <FaPinterest />, link: "https://pin.it/svBTEcxxp" },
+            { icon: <FaTiktok />, link: "https://www.tiktok.com/@yomide132" }
+          ].map((social, idx) => (
+            <a 
+              key={idx}
+              href={social.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white/30 hover:text-indigo-400 transition-all duration-300 hover:scale-125"
+            >
+              {social.icon}
+            </a>
+          ))}
+        </motion.div>
+      </motion.div>
+
+      {/* Subtle Scroll Indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-20">
+        <span className="text-[8px] uppercase tracking-[0.5em] font-bold">Explore</span>
+        <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent" />
       </div>
     </section>
   );
 };
+
 export default Hero;

@@ -1,86 +1,117 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Portfolio Website",
-    description:
-      "A modern portfolio built with Next.js 15, TailwindCSS, and TypeScript.",
-    image: "/images/project1.jpg",
-    github: "https://github.com/your-username/portfolio",
-    demo: "https://your-portfolio.vercel.app",
-  },
-  {
-    title: "E-commerce Store",
-    description: "Full-stack e-commerce app with cart and payment integration.",
-    image: "/images/project2.jpg",
-    github: "https://github.com/your-username/ecommerce",
-    demo: "https://ecommerce-demo.vercel.app",
-  },
-  {
-    title: "Topotas Travel Website",
-    description: "Topotas Travel helps users apply for visas, Book Appointment,explore destinations, and contact support through a sleek interface.",
+    title: "Topotas Ecosystem",
+    description: "High-fidelity logistics platform with secure visa processing and mission scheduling.",
     image: "/images/to.png",
     github: "https://github.com/heisyomide/Topotas",
     demo: "https://topotasoptimumservices.com",
+    tag: "Next.js / Logic"
+  },
+  {
+    title: "Neural Commerce",
+    description: "Architectural e-commerce interface featuring seamless payment bridges.",
+    image: "/images/project2.jpg",
+    github: "https://github.com/heisyomide/ecommerce",
+    demo: "https://ecommerce-demo.vercel.app",
+    tag: "Full-Stack"
+  },
+  {
+    title: "Ether Portfolio",
+    description: "A minimalist, neural-inspired developer dossier using luminous brutalism.",
+    image: "/images/project1.jpg",
+    github: "https://github.com/heisyomide/portfolio",
+    demo: "https://your-portfolio.vercel.app",
+    tag: "UX / Design"
   },
 ];
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 bg-gray-950 text-gray-200">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-teal-400 text-center mb-12">
-          Featured Projects
-        </h2>
+    <section id="projects" className="relative py-32 bg-[#0A0A0A] overflow-hidden">
+      {/* Background Radial Source */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-500/5 blur-[150px] rounded-full pointer-events-none" />
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {projects.slice(0, 3).map((project, idx) => (
-            <div
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
+          <div className="space-y-4">
+            <span className="text-[10px] uppercase tracking-[0.8em] text-indigo-400 font-bold block">Production Logs</span>
+            <h2 className="text-5xl md:text-7xl font-light tracking-tighter text-white">
+              Featured <span className="font-serif italic opacity-80">Works.</span>
+            </h2>
+          </div>
+          <p className="text-white/40 text-sm max-w-xs font-light leading-relaxed">
+            // A curation of high-performance web environments and digital architectures.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-10">
+          {projects.map((project, idx) => (
+            <motion.div
               key={idx}
-              className="bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="group relative flex flex-col"
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-white mb-2">
+              {/* Image Portal */}
+              <div className="relative h-64 w-full rounded-3xl overflow-hidden border border-white/5 bg-white/[0.02]">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-80" />
+                
+                {/* Tech Tag */}
+                <div className="absolute top-4 left-4">
+                  <span className="text-[8px] uppercase tracking-widest text-white/50 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+                    {project.tag}
+                  </span>
+                </div>
+              </div>
+
+              {/* Text Content */}
+              <div className="pt-8 px-2">
+                <h3 className="text-2xl font-light text-white mb-3 tracking-tight group-hover:text-indigo-400 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-3">{project.description}</p>
-                <div className="flex space-x-4">
+                <p className="text-white/40 text-sm mb-6 leading-relaxed font-light">
+                  {project.description}
+                </p>
+                
+                <div className="flex space-x-8">
                   <a
                     href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 hover:text-teal-400"
+                    className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-white/30 hover:text-white transition-all"
                   >
-                    <FaGithub /> Code
+                    <FaGithub /> Source
                   </a>
                   <a
                     href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 hover:text-teal-400"
+                    className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-indigo-400 hover:text-indigo-300 transition-all"
                   >
-                    <FaExternalLinkAlt /> Live
+                    Live Preview <FaExternalLinkAlt className="text-[8px]" />
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Button to view all projects */}
-        <div className="text-center mt-10">
+        {/* View All CTA */}
+        <div className="text-center mt-24">
           <a
             href="/projects"
-            className="btn-primary inline-block"
+            className="relative inline-flex items-center gap-4 group"
           >
-            View All Projects
+            <span className="text-[10px] uppercase tracking-[0.4em] text-white/60 group-hover:text-white transition-colors">View Complete Archive</span>
+            <div className="h-[1px] w-12 bg-indigo-500 group-hover:w-20 transition-all" />
           </a>
         </div>
       </div>
