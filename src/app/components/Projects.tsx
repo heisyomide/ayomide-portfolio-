@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
+
 const projects = [
   {
     title: "Topotas Ecosystem",
@@ -21,15 +22,63 @@ const projects = [
     tag: "Full-Stack"
   },
   {
-    title: "Ether Portfolio",
+    title: "Aviorè Careers",
+    description: "A specialized platform for aviation professionals to manage career paths and applications.",
+    image: "/images/aviore1.png",
+    github: "https://github.com/heisyomide/avia-careers",
+    demo: "https://avia-careers.vercel.app",
+    tag: "Next.js / Careers"
+  },
+  {
+    title: "Aviorè Shop",
+    description: "Retail interface for aviation equipment and luxury pilot accessories.",
+    image: "/images/avi.jpeg",
+    github: "https://github.com/heisyomide/avia-shop",
+    demo: "https://aviore-shop.vercel.app",
+    tag: "E-Commerce"
+  },
+  {
+    title: "HealthMe",
+    description: "Comprehensive health tracking and wellness platform with data visualization.",
+    image: "/images/health.jpeg",
+    github: "https://github.com/heisyomide/healthme-frontend",
+    demo: "https://healthme-frontend.vercel.app",
+    tag: "Full-Stack / Health"
+  },
+  {
+    title: "TraceAm",
+    description: "Instant background checks. Nigeria Leading Personal Security Network.",
+    image: "/images/traceam.jpeg",
+    github: "https://github.com/heisyomide/traceam",
+    demo: "https://traceam.vercel.app",
+    tag: "UX / Frontend"
+  },
+  {
+    title: "LinkMart",
+    description: "A connection-driven interface designed for high-speed networking and data sharing.",
+    image: "/images/linkmat.jpg",
+    github: "https://github.com/heisyomide/linkmat-frontend",
+    demo: "https://linkmat-demo.vercel.app",
+    tag: "React / Design"
+  },
+  {
+    title: "Portfolio",
     description: "A minimalist, neural-inspired developer dossier using luminous brutalism.",
-    image: "/images/project1.jpg",
-    github: "https://github.com/heisyomide/portfolio",
-    demo: "https://your-portfolio.vercel.app",
+    image: "/images/port.png",
+    github: "https://github.com/heisyomide/ayomide-portfolio",
+    demo: "https://ayomide-portfolio.vercel.app",
     tag: "UX / Design"
   },
-];
+  {
+    title: "LinkMart",
+    description: "A connection-driven interface designed for high-speed networking and data sharing.",
+    image: "/images/vercel.png",
+    github: "https://github.com/heisyomide/linkmat-frontend",
+    demo: "https://linkmat-demo.vercel.app",
+    tag: "React / Design"
+  },
 
+];
 export default function ProjectsSection() {
   return (
     <section id="projects" className="relative py-32 bg-[#0A0A0A] overflow-hidden">
