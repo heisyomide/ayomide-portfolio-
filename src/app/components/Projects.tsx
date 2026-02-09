@@ -24,7 +24,7 @@ const projects = [
   {
     title: "Aviorè Careers",
     description: "A specialized platform for aviation professionals to manage career paths and applications.",
-    image: "/images/aviore1.png",
+    image: "/images/aviore1.PNG",
     github: "https://github.com/heisyomide/avia-careers",
     demo: "https://avia-careers.vercel.app",
     tag: "Next.js / Careers"
