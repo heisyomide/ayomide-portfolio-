@@ -53,10 +53,9 @@ const Hero = () => {
             Ayomide <span className="font-serif italic opacity-80">Kofoworola.</span>
           </h1>
           
-          <p className="text-white/40 text-lg md:text-xl font-light max-w-lg mx-auto leading-relaxed">
-            Crafting high-fidelity web environments through <br className="hidden md:block"/> 
-            minimalist design and neural logic.
-          </p>
+<p className="text-white/40 text-lg md:text-xl font-light max-w-lg mx-auto leading-relaxed">
+  Secure. Scalable. Smart. Web development with application security at its core.
+</p>
         </div>
 
         {/* Floating Social Hub */}
