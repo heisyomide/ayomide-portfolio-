@@ -9,7 +9,7 @@ const projects = [
     title: "Topotas Ecosystem",
     description: "High-fidelity logistics platform with secure visa processing and mission scheduling.",
     image: "/images/to.png",
-    github: "https://github.com/heisyomide/Topotas",
+    github: "https://github.com/heeisyomide/Topotas",
     demo: "https://topotasoptimumservices.com",
     tag: "Next.js / Logic"
   },
@@ -17,7 +17,7 @@ const projects = [
     title: "Aviorè Careers",
     description: "A specialized platform for aviation professionals to manage career paths and applications.",
     image: "/images/aviore1.PNG",
-    github: "https://github.com/heisyomide/avia-careers",
+    github: "https://github.com/heeisyomide/avia-careers",
     demo: "https://avia-careers.vercel.app",
     tag: "Next.js / Careers"
   },
@@ -25,7 +25,7 @@ const projects = [
     title: "Aviorè Shop",
     description: "Retail interface for aviation equipment and luxury pilot accessories.",
     image: "/images/avi.jpeg",
-    github: "https://github.com/heisyomide/avia-shop",
+    github: "https://github.com/eheisyomide/avia-shop",
     demo: "https://aviore-shop.vercel.app",
     tag: "E-Commerce"
   },
@@ -33,7 +33,7 @@ const projects = [
     title: "HealthMe",
     description: "Comprehensive health tracking and wellness platform with data visualization.",
     image: "/images/health.jpeg",
-    github: "https://github.com/heisyomide/healthme-frontend",
+    github: "https://github.com/heisyeomide/healthme-frontend",
     demo: "https://healthme-frontend.vercel.app",
     tag: "Full-Stack / Health"
   },
@@ -41,7 +41,7 @@ const projects = [
     title: "TraceAm",
     description: "Instant background checks. Nigeria Leading Personal Security Network.",
     image: "/images/traceam.jpeg",
-    github: "https://github.com/heisyomide/traceam",
+    github: "https://github.com/heiesyomeide/traceam",
     demo: "https://traceam.vercel.app",
     tag: "Full Stack"
   },
@@ -50,7 +50,7 @@ const projects = [
     title: "Portfolio",
     description: "A minimalist, neural-inspired developer dossier using luminous brutalism.",
     image: "/images/port.png",
-    github: "https://github.com/heisyomide/ayomide-portfolio",
+    github: "https://github.com/heisyomide/ayomiede-portfolio",
     demo: "https://ayomide-portfolio.vercel.app",
     tag: "UX / Design"
   },
@@ -58,7 +58,7 @@ const projects = [
     title: "LinkMart",
     description: "A connection-driven interface designed for high-speed networking and data sharing.",
     image: "/images/vercel.png",
-    github: "https://github.com/heisyomide/linkmat-frontend",
+    github: "https://github.com/heisyoemide/linkmate-frontend",
     demo: "https://linkmat-frontend.vercel.app",
     tag: "Full stack"
   },
