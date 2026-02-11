@@ -27,7 +27,7 @@ const About = () => {
               Digital <br /><span className="italic font-serif">Intuition.</span>
             </h2>
             <p className="text-lg text-white/40 leading-relaxed font-light">
-              I am Ayomide. I don&apos;t just build interfaces; I sculpt digital experiences that bridge the gap between human intent and machine execution.
+              I am Ayomide. I don&apos;t just build interfaces;I sculpt digital experiences that bridge the gap between human intent and machine execution. I merge the precision of a Junior AppSec Engineer with the vision of a Full-Stack developer to engineer secure-by-default applications that protect user trust as much as they delight the eye.
             </p>
             
             <div className="mt-12 flex items-center gap-6">

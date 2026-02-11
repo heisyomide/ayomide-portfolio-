@@ -14,14 +14,6 @@ const projects = [
     tag: "Next.js / Logic"
   },
   {
-    title: "Neural Commerce",
-    description: "Architectural e-commerce interface featuring seamless payment bridges.",
-    image: "/images/project2.jpg",
-    github: "https://github.com/heisyomide/ecommerce",
-    demo: "https://ecommerce-demo.vercel.app",
-    tag: "Full-Stack"
-  },
-  {
     title: "Aviorè Careers",
     description: "A specialized platform for aviation professionals to manage career paths and applications.",
     image: "/images/aviore1.PNG",
@@ -51,16 +43,9 @@ const projects = [
     image: "/images/traceam.jpeg",
     github: "https://github.com/heisyomide/traceam",
     demo: "https://traceam.vercel.app",
-    tag: "UX / Frontend"
+    tag: "Full Stack"
   },
-  {
-    title: "LinkMart",
-    description: "A connection-driven interface designed for high-speed networking and data sharing.",
-    image: "/images/linkmat.jpg",
-    github: "https://github.com/heisyomide/linkmat-frontend",
-    demo: "https://linkmat-demo.vercel.app",
-    tag: "React / Design"
-  },
+
   {
     title: "Portfolio",
     description: "A minimalist, neural-inspired developer dossier using luminous brutalism.",
@@ -74,8 +59,8 @@ const projects = [
     description: "A connection-driven interface designed for high-speed networking and data sharing.",
     image: "/images/vercel.png",
     github: "https://github.com/heisyomide/linkmat-frontend",
-    demo: "https://linkmat-demo.vercel.app",
-    tag: "React / Design"
+    demo: "https://linkmat-frontend.vercel.app",
+    tag: "Full stack"
   },
 
 ];

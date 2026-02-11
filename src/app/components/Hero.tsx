@@ -33,7 +33,7 @@ const Hero = () => {
             <img
               src="/images/pro.jpg"
               alt="Ayomide Kofoworola"
-              className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full object-cover rounded-full  transition-all duration-700"
             />
           </div>
         </div>

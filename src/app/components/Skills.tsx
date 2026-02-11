@@ -2,11 +2,21 @@
 import { motion } from 'framer-motion'
 
 const technicalSkills = [
-  { name: "Next.js 15", level: 80, sector: "Architecture" },
-  { name: "TypeScript", level: 85, sector: "Logic" },
+  // --- Core Development ---
+  { name: "Next.js 16", level: 85, sector: "Architecture" },
+  { name: "TypeScript", level: 88, sector: "Type Safety" },
   { name: "Tailwind CSS", level: 90, sector: "Aesthetics" },
   { name: "JavaScript", level: 88, sector: "Core" },
-]
+
+  // --- AppSec & Security Engineering ---
+  { name: "OWASP Top 10", level: 82, sector: "Vulnerability Research" },
+  { name: "Python (Security)", level: 75, sector: "Automation/Scripting" },
+  { name: "Burp Suite", level: 70, sector: "Pentesting" },
+  { name: "Static Analysis (SAST)", level: 78, sector: "Code Auditing" },
+  { name: "JWT & OAuth 2.0", level: 85, sector: "Identity/IAM" },
+  { name: "SQL Injection/XSS", level: 80, sector: "Threat Remediation" },
+  { name: "Docker Security", level: 65, sector: "DevSecOps" },
+];
 
 const professionalSkills = [
   { name: "Global Comm", level: 95 },
