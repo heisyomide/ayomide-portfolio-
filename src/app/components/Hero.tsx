@@ -70,7 +70,7 @@ const Hero = () => {
             { icon: <FaLinkedin />, link: "#" },
             { icon: <FaTwitter />, link: "https://x.com/he_is_yo?s=21" },
             { icon: <FaFacebook />, link: "https://www.facebook.com/share/1GnCQxft29/?mibextid=wwXIfr" },
-            { icon: <FaInstagram />, link: "https://www.instagram.com/heis_yo?igsh=MWI4cXJ5Zmw0NHcxOQ%3D%3D" },
+            { icon: <FaInstagram />, link: "https://www.instagram.com/heis_yomide?igsh=MTY5NTR6eXY0OWJodg%3D%3D&utm_source=qr" },
             { icon: <FaPinterest />, link: "https://pin.it/svBTEcxxp" },
             { icon: <FaTiktok />, link: "https://www.tiktok.com/@yomide132" }
           ].map((social, idx) => (

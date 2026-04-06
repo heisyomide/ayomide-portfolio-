@@ -63,8 +63,8 @@ export default function Footer() {
             <div className="flex gap-6 text-white/30">
               <a href="#" className="hover:text-indigo-400 transition-all hover:scale-110"><FaGithub size={18} /></a>
               <a href="#" className="hover:text-indigo-400 transition-all hover:scale-110"><FaLinkedin size={18} /></a>
-              <a href="#" className="hover:text-indigo-400 transition-all hover:scale-110"><FaTwitter size={18} /></a>
-              <a href="#" className="hover:text-indigo-400 transition-all hover:scale-110"><FaInstagram size={18} /></a>
+              <a href="" className="hover:text-indigo-400 transition-all hover:scale-110"><FaTwitter size={18} /></a>
+              <a href="https://www.instagram.com/heis_yomide" className="hover:text-indigo-400 transition-all hover:scale-110"><FaInstagram size={18} /></a>
             </div>
           </div>
         </div>

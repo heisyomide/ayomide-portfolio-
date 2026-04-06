@@ -18,7 +18,7 @@ const projects = [
     description: "A specialized platform for aviation professionals to manage career paths and applications.",
     image: "/images/aviore1.PNG",
     github: "https://github.com/heeisyomide/avia-careers",
-    demo: "https://avia-careers.vercel.app",
+    demo: "https://aviore-careers.vercel.app",
     tag: "Next.js / Careers"
   },
   {
@@ -59,8 +59,34 @@ const projects = [
     description: "A connection-driven interface designed for high-speed networking and data sharing.",
     image: "/images/vercel.png",
     github: "https://github.com/heisyoemide/linkmate-frontend",
-    demo: "https://linkmat-frontend.vercel.app",
+    demo: "https://www.linkmart.online/",
     tag: "Full stack"
+  },
+
+
+  {
+    title: "Dental Clinic",
+    description: "Professional healthcare website for dental appointments, patient services, and treatment bookings.",
+    image: "/images/dental.jpeg",
+    github: "https://github.com/yourusername/dental-clinic",
+    demo: "https://dental-clinic-or39.vercel.app",
+    tag: "Healthcare / UI"
+  },
+  {
+    title: "CypherX",
+    description: "Cryptocurrency trading dashboard with portfolio analytics, market charts, and secure transaction flow.",
+    image: "/images/cypherx.jpeg",
+    github: "https://github.com/yourusername/cypherx",
+    demo: "https://cypherx.trade",
+    tag: "FinTech / Crypto"
+  },
+  {
+    title: "Afbam",
+    description: "Corporate digital presence for a plumbing and engineering company with service booking and project showcase.",
+    image: "/images/afbam.jpeg",
+    github: "https://github.com/yourusername/afbam",
+    demo: "https://afbam.vercel.app",
+    tag: "Corporate / Services"
   },
 
 ];
